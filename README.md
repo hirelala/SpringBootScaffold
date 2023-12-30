@@ -20,6 +20,7 @@
     - username: `root`
     - password: `12345678`
 4. Run `MainApplication.java` to start the server.
+5. Open `http://localhost:8080/swagger-ui/index.html` to see the swagger doc.
 
 ## How to Build Jar
 ```shell
@@ -27,3 +28,10 @@ java --version  # make sure your java version is 17
 ./gradlew clean build
 java -jar build/libs/scaffold-0.0.1.jar
 ```
+
+
+## One key deploy
+
+### Deploy to Fly.io
+### Deploy to render.com
+### Deploy to Heroku
