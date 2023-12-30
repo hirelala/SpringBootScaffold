@@ -20,3 +20,9 @@
     - username: `root`
     - password: `12345678`
 4. Run `MainApplication.java` to start the server.
+
+## How to Build Jar
+```shell
+./gradlew clean build
+java -jar build/libs/scaffold-0.0.1.jar
+```
