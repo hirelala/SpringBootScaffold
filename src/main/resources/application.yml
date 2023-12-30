@@ -2,7 +2,6 @@ server:
   port: 8080
 
 spring:
-    # mysql 8
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DBNAME:springboot_scaffold}?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
     username: ${MYSQL_USERNAME:root}
