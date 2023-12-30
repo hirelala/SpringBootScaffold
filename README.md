@@ -23,6 +23,7 @@
 
 ## How to Build Jar
 ```shell
+java --version  # make sure your java version is 17
 ./gradlew clean build
 java -jar build/libs/scaffold-0.0.1.jar
 ```
