@@ -1,12 +1,13 @@
 # SpringBootScaffold
 `SpringBootScaffold` is a scaffold for Spring Boot project. It contains basic configurations and common used components.
 - Spring Boot: `3.1.0`
-- Spring JPA: `Same as Spring Boot`
-- Spring Web: `Same as Spring Boot`
-- Spring Test: `Same as Spring Boot`
+  - Spring JPA
+  - Spring Web
+  - Spring Test
 - Spring Doc (Swagger): `2.3.0`
-- Lombok: `1.18.26`
+- Lombok: `1.18.30`
 - MySQL Connector: `8.0.27`
+- Mapstruct: `1.5.5.Final`
 
 
 ## How to use
