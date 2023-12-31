@@ -28,8 +28,17 @@ dependencies {
 	implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0"
 	implementation "org.springdoc:springdoc-openapi-starter-webmvc-api:2.3.0"
 	implementation "mysql:mysql-connector-java:8.0.26"
-	compileOnly 'org.projectlombok:lombok:1.18.26'
-	annotationProcessor 'org.projectlombok:lombok:1.18.26'
+
+	compileOnly 'org.projectlombok:lombok:1.18.30'
+	annotationProcessor 'org.projectlombok:lombok:1.18.30'
+	testCompileOnly 'org.projectlombok:lombok:1.18.30'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+	// Put mapstruct dependency under lombok dependency to avoid null value issue
+	// Reference: https://supakon-k.medium.com/how-to-fix-mapstruct-in-spring-boot-when-return-null-object-4ead44279af0
+	implementation "org.mapstruct:mapstruct:1.5.5.Final"
+	annotationProcessor "org.mapstruct:mapstruct-processor:1.5.5.Final"
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
