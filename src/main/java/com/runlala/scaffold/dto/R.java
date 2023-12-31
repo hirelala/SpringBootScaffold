@@ -15,11 +15,11 @@ public class R<T> {
     }
 
     public static <T> R<T> success() {
-        return new R<>(true, "", null);
+        return R.success(null);
     }
 
     public static <T> R<T> success(T object) {
-        return new R<>(true, "", object);
+        return R.success("Ok", object);
     }
 
     public static <T> R<T> success(String message, T object) {
@@ -27,11 +27,11 @@ public class R<T> {
     }
 
     public static <T> R<T> error() {
-        return new R<>(false, "", null);
+        return R.error(null);
     }
 
     public static <T> R<T> error(String message) {
-        return new R<>(false, message, null);
+        return R.error(message, null);
     }
 
     public static <T> R<T> error(String message, T object) {

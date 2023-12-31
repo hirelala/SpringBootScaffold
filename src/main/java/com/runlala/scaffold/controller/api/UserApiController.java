@@ -17,10 +17,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Map;
+import java.util.List;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/users")
 @Tag(name = "User")
 public class UserApiController {
     private final UserService userService;
@@ -39,12 +40,23 @@ public class UserApiController {
 
         User userIn = userMapper.toUser(userInDto);
         User user = userService.addUser(userIn);
-        return R.success(userMapper.toUserOutDTO(user));
+        return R.success(userMapper.toUserOutDto(user));
     }
 
     @GetMapping("/get")
-    public R<Map<String, Boolean>> exist(@RequestParam String email) {
+    public R<UserOutDto> get(@RequestParam String email) {
         Assert.isTrue(StringUtils.isNotBlank(email), "email can not be blank");
-        return R.success(Map.of("exist", userService.isEmailExist(email)));
+
+        Optional<User> user = userService.getByEmail(email);
+        if (user.isEmpty()) {
+            return R.error("user not found");
+        }
+        return R.success(userMapper.toUserOutDto(user.get()));
+    }
+
+    @GetMapping("/get-all")
+    public R<List<UserOutDto>> getAll() {
+        List<User> users = userService.getAll();
+        return R.success(userMapper.toUserOutDtoList(users));
     }
 }
