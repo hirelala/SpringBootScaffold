@@ -7,6 +7,10 @@ plugins {
 group = 'com.runlala'
 version = '0.0.1'
 
+bootJar {
+	archiveFileName = "${rootProject.name}.jar"
+}
+
 java {
 	sourceCompatibility = '17'
 	targetCompatibility = '17'
@@ -45,5 +49,3 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-
-tasks.jar {}
