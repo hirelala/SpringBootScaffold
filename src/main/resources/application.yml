@@ -7,6 +7,10 @@ spring:
     username: ${MYSQL_USERNAME:root}
     password: ${MYSQL_PASSWORD:12345678}
     driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 15000
+      connection-init-sql: SELECT 1
   jpa:
     hibernate:
       ddl-auto: update
