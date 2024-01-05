@@ -4,9 +4,10 @@
   - Spring JPA
   - Spring Web
   - Spring Test
+  - Thymeleaf
 - Spring Doc (Swagger): `2.3.0`
 - Lombok: `1.18.30`
-- MySQL Connector: `8.0.27`
+- MySQL Connector: `8.0.33`
 - Mapstruct: `1.5.5.Final`
 
 
