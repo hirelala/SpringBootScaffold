@@ -27,13 +27,22 @@ repositories {
 }
 
 dependencies {
+	// Spring Boot
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation "org.springframework.boot:spring-boot-starter-thymeleaf"
+	implementation "org.springframework.boot:spring-boot-starter-validation"
+
+	// Database
+	implementation "mysql:mysql-connector-java:8.0.33"
+	implementation 'org.postgresql:postgresql:42.7.1'
+	implementation 'com.h2database:h2:2.2.224'
+
+	// Spring openapi (Swagger)
 	implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0"
 	implementation "org.springdoc:springdoc-openapi-starter-webmvc-api:2.3.0"
-	implementation "mysql:mysql-connector-java:8.0.33"
 
+	// Lombok
 	compileOnly 'org.projectlombok:lombok:1.18.30'
 	annotationProcessor 'org.projectlombok:lombok:1.18.30'
 	testCompileOnly 'org.projectlombok:lombok:1.18.30'
@@ -44,6 +53,7 @@ dependencies {
 	implementation "org.mapstruct:mapstruct:1.5.5.Final"
 	annotationProcessor "org.mapstruct:mapstruct-processor:1.5.5.Final"
 
+	// Test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
