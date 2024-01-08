@@ -3,8 +3,9 @@
 - Spring Boot: `3.1.0`
   - Spring JPA
   - Spring Web
-  - Spring Test
   - Thymeleaf
+  - Validation
+  - Spring Test
 - Spring Doc (Swagger): `2.3.0`
 - Lombok: `1.18.30`
 - Database Connector:
