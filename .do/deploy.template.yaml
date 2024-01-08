@@ -1,5 +1,5 @@
 spec:
-  name: SpringBootScaffold
+  name: springboot-scaffold
   services:
     - name: web
       git:
