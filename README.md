@@ -33,7 +33,7 @@ Following shows how to change by environment variables.
 ### 3.1 H2
 H2 is **DEFAULT database** for **SpringBootScaffold**. Its configuration is:
 ```dotenv
-DB_JDBC_URL=jdbc:h2:file:./springboot_scaffold
+DB_JDBC_URL=jdbc:h2:mem:springboot_scaffold
 DB_USERNAME=sa
 DB_PASSWORD=password
 DB_DRIVER_CLASS=org.h2.Driver
