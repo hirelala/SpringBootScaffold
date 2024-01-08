@@ -9,7 +9,7 @@
 - Lombok: `1.18.30`
 - Database Connector:
   - H2 Database: `2.2.224`
-  - MySQL Connector: `8.0.33`
+  - MySQL Connector: `8.2.0`
   - PostgreSQL: `42.7.1`
 - Mapstruct: `1.5.5.Final`
 
