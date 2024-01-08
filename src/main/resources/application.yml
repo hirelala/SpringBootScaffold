@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: ${DB_DRIVER_CLASS:org.h2.Driver}
-    url: ${DB_JDBC_URL:jdbc:h2:file:./springboot_scaffold}
+    url: ${DB_JDBC_URL:jdbc:h2:mem:springboot_scaffold}
     username: ${DB_USERNAME:sa}
     password: ${DB_PASSWORD:password}
     hikari:
