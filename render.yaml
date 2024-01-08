@@ -7,4 +7,3 @@ services:
     autoDeploy: false
     region: singapore
     healthCheckPath: /health
-    port: 8080
