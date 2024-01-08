@@ -4,7 +4,7 @@ spec:
   services:
     - name: web
       dockerfile_path: Dockerfile
-      instance_size_slug: basic-xxs
+      instance_size_slug: basic-xs
       instance_count: 1
       http_port: 8080
       health_check:
