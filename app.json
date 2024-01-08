@@ -1,7 +1,0 @@
-{
-  "name": "SpringBootScaffold",
-  "description": "A demo configuration to deploy SpringBootScaffold to Heroku",
-  "repository": "https://github.com/runlala/SpringBootScaffold",
-  "logo": "https://avatars.githubusercontent.com/u/143162013?s=48&v=4",
-  "keywords": ["Spring Boot", "Scaffold", "runlala"]
-}
