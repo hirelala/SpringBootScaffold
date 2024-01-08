@@ -68,7 +68,7 @@ java -jar build/libs/SpringbootScaffold.jar
 ```
 
 
-## 5 One click Deployment
+## 5 One Click Deployment
 
 [![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/runlala/SpringBootScaffold/tree/main&refcode=026c8249359c)
 
