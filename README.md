@@ -65,12 +65,10 @@ java -jar build/libs/SpringbootScaffold.jar
 ```
 
 
-## One key deploy
+## Quick Deploy
 
-### Deploy to DigitalOcean
-[![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/runlala/SpringBootScaffold/tree/main)
+[![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/runlala/SpringBootScaffold/tree/main&refcode=026c8249359c)
 
 
-### Deploy to Fly.io
 ### Deploy to render.com
 ### Deploy to Heroku
