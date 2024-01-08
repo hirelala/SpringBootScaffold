@@ -18,19 +18,26 @@
 [DEMO](https://springboot-scaffold.onrender.com/)
 
 
-## 2 How to use
+## 2 Run in IDEA IDE
+<details>
+<summary>Click to expand</summary>
+
 1. Make sure your IDEA IDE setting to JDK 17.
    ![](ide.png)
 2. Run `MainApplication.java` to start the server.
 3. Open [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) to see the swagger doc.
 4. The data will save to H2 database file `./springboot_scaffold.mv.db` by default.
+</details>
 
-## 3 How to change different database
+## 3 Database configuration
+<details>
+<summary>Click to expand</summary>
+
 **SpringBootScaffold** uses `H2` memory database default. It can be changed easily to other database by specifying environment variables or `application.yml`.
 
 Following shows how to change by environment variables.
 
-### 3.1 H2
+### 3.1 H2 database (default)
 H2 is **DEFAULT database** for **SpringBootScaffold**. Its configuration is:
 ```dotenv
 DB_JDBC_URL=jdbc:h2:mem:springboot_scaffold
@@ -59,15 +66,18 @@ DB_PASSWORD=12345678
 DB_DRIVER_CLASS=org.postgresql.Driver
 DB_JPA_DIALECT=org.hibernate.dialect.PostgreSQLDialect
 ```
-
+</details>
 
 ## 4 How to Build Jar
+<details>
+<summary>Click to expand</summary>
+
 ```shell
 java --version  # make sure your java version is 17
 ./gradlew clean build
 java -jar build/libs/SpringbootScaffold.jar
 ```
-
+</details>
 
 ## 5 One Click Deployment
 
