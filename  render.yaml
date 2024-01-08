@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: webdis
+    runtime: docker
+    repo: https://github.com/runlala/SpringBootScaffold.git
+    plan: free
+    autoDeploy: false
