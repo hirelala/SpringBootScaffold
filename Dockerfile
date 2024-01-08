@@ -6,7 +6,7 @@ COPY gradle gradle
 COPY build.gradle .
 COPY settings.gradle .
 COPY src src
-RUN ./gradlew clean build
+RUN ./gradlew clean build --daemon
 
 # Stage 2: Run with JDK 17
 FROM openjdk:17.0.2-slim
