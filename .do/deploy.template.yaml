@@ -1,8 +1,13 @@
+# https://docs.digitalocean.com/products/app-platform/how-to/add-deploy-do-button/
 spec:
   name: springboot-scaffold
   services:
     - name: web
       dockerfile_path: Dockerfile
+      instance_size_slug: basic-xxs
+      instance_count: 1
+      http_port: 8080
+      health_check: /health
       git:
         branch: main
         repo_clone_url: https://github.com/runlala/SpringBootScaffold.git
