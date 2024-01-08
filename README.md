@@ -15,7 +15,7 @@
 - Mapstruct: `1.5.5.Final`
 
 ## 1 Demo
-[DEMO](https://springbootscaffold.onrender.com/)
+[DEMO](https://springboot-scaffold.onrender.com/)
 
 
 ## 2 How to use
