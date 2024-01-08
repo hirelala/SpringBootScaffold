@@ -48,10 +48,7 @@ public class UserApiController {
         Assert.isTrue(StringUtils.isNotBlank(email), "email can not be blank");
 
         Optional<User> user = userService.getByEmail(email);
-        if (user.isEmpty()) {
-            return R.error("user not found");
-        }
-        return R.success(userMapper.toUserOutDto(user.get()));
+        return user.map(value -> R.success(userMapper.toUserOutDto(value))).orElseGet(() -> R.error("user not found"));
     }
 
     @GetMapping("/get-all")
