@@ -13,20 +13,23 @@
   - PostgreSQL: `42.7.1`
 - Mapstruct: `1.5.5.Final`
 
+## 1 Demo
+[DEMO](https://springbootscaffold.onrender.com/)
 
-## How to use
+
+## 2 How to use
 1. Make sure your IDEA IDE setting to JDK 17.
    ![](ide.png)
 2. Run `MainApplication.java` to start the server.
 3. Open [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) to see the swagger doc.
 4. The data will save to H2 database file `./springboot_scaffold.mv.db` by default.
 
-## How to change different database
+## 3 How to change different database
 Default **SpringBootScaffold** database is `H2`, you can change to other database easily by specifying environment variables or `application.yml`.
 
 Following shows how to change by environment variables.
 
-### H2
+### 3.1 H2
 H2 is **DEFAULT database** for **SpringBootScaffold**. Its configuration is:
 ```dotenv
 DB_JDBC_URL=jdbc:h2:file:./springboot_scaffold
@@ -36,7 +39,7 @@ DB_DRIVER_CLASS=org.h2.Driver
 DB_JPA_DIALECT=org.hibernate.dialect.H2Dialect
 ```
 
-### MySQL
+### 3.2 MySQL
 Create a MySQL database named `springboot_scaffold`, then setup environment variables as following (change accordingly):
 ```dotenv
 DB_JDBC_URL=jdbc:mysql://localhost:3306/springboot_scaffold?useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=GMT%2B8
@@ -46,7 +49,7 @@ DB_DRIVER_CLASS=com.mysql.cj.jdbc.Driver
 DB_JPA_DIALECT=org.hibernate.dialect.MySQLDialect
 ```
 
-### PostgreSQL
+### 3.3 PostgreSQL
 Create a PostgreSQL database named `springboot_scaffold`, then setup environment variables as following (change accordingly):
 ```dotenv
 DB_JDBC_URL=jdbc:postgresql://localhost:5432/springboot_scaffold
@@ -57,7 +60,7 @@ DB_JPA_DIALECT=org.hibernate.dialect.PostgreSQLDialect
 ```
 
 
-## How to Build Jar
+## 4 How to Build Jar
 ```shell
 java --version  # make sure your java version is 17
 ./gradlew clean build
@@ -65,10 +68,10 @@ java -jar build/libs/SpringbootScaffold.jar
 ```
 
 
-## Quick Deploy
+## 5 One click Deployment
 
 [![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/runlala/SpringBootScaffold/tree/main&refcode=026c8249359c)
 
+[![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/runlala/SpringBootScaffold) (AWS)
 
-### Deploy to render.com
-### Deploy to Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
