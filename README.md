@@ -61,7 +61,7 @@ DB_JPA_DIALECT=org.hibernate.dialect.PostgreSQLDialect
 ```shell
 java --version  # make sure your java version is 17
 ./gradlew clean build
-java -jar build/libs/scaffold-0.0.1.jar
+java -jar build/libs/SpringbootScaffold.jar
 ```
 
 
