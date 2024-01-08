@@ -7,9 +7,11 @@ import com.runlala.scaffold.entity.User;
 import com.runlala.scaffold.mapper.UserMapper;
 import com.runlala.scaffold.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,6 +25,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/users")
 @Tag(name = "User")
+@Validated
 public class UserApiController {
     private final UserService userService;
     private final UserMapper userMapper;
@@ -34,7 +37,7 @@ public class UserApiController {
     }
 
     @PostMapping("/add")
-    public R<UserOutDto> add(@RequestBody UserInDto userInDto) {
+    public R<UserOutDto> add(@RequestBody @Valid UserInDto userInDto) {
         Assert.isTrue(StringUtils.isNotBlank(userInDto.getName()), "name can not be blank");
         Assert.isTrue(StringUtils.isNotBlank(userInDto.getEmail()), "email can not be blank");
 
