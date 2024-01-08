@@ -26,7 +26,7 @@
 4. The data will save to H2 database file `./springboot_scaffold.mv.db` by default.
 
 ## 3 How to change different database
-Default **SpringBootScaffold** database is `H2`, you can change to other database easily by specifying environment variables or `application.yml`.
+**SpringBootScaffold** uses `H2` memory database default. It can be changed easily to other database by specifying environment variables or `application.yml`.
 
 Following shows how to change by environment variables.
 
