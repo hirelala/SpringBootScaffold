@@ -71,7 +71,7 @@ java -jar build/libs/SpringbootScaffold.jar
 
 ## 5 One Click Deployment
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](?repo=https://github.com/runlala/SpringBootScaffold)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/runlala/SpringBootScaffold.git)
 
 
 [![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/runlala/SpringBootScaffold/tree/main&refcode=026c8249359c)
