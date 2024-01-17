@@ -1,6 +1,5 @@
 package com.runlala.scaffold.controller.api;
 
-import com.runlala.scaffold.dto.R;
 import com.runlala.scaffold.dto.in.UserInDto;
 import com.runlala.scaffold.dto.out.UserOutDto;
 import com.runlala.scaffold.entity.User;
@@ -10,14 +9,10 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.util.Assert;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -37,26 +32,30 @@ public class UserApiController {
     }
 
     @PostMapping("/add")
-    public R<UserOutDto> add(@RequestBody @Valid UserInDto userInDto) {
+    public ResponseEntity<UserOutDto> add(@RequestBody @Valid UserInDto userInDto) {
         Assert.isTrue(StringUtils.isNotBlank(userInDto.getName()), "name can not be blank");
         Assert.isTrue(StringUtils.isNotBlank(userInDto.getEmail()), "email can not be blank");
 
         User userIn = userMapper.toUser(userInDto);
         User user = userService.addUser(userIn);
-        return R.success(userMapper.toUserOutDto(user));
+        return ResponseEntity.ok(userMapper.toUserOutDto(user));
     }
 
     @GetMapping("/get")
-    public R<UserOutDto> get(@RequestParam String email) {
+    public ResponseEntity<UserOutDto> get(@RequestParam String email) {
         Assert.isTrue(StringUtils.isNotBlank(email), "email can not be blank");
 
         Optional<User> user = userService.getByEmail(email);
-        return user.map(value -> R.success(userMapper.toUserOutDto(value))).orElseGet(() -> R.error("user not found"));
+        if (user.isEmpty()) {
+            throw new IllegalArgumentException("Can't not find user!");
+        }
+
+        return ResponseEntity.ok(userMapper.toUserOutDto(user.get()));
     }
 
     @GetMapping("/get-all")
-    public R<List<UserOutDto>> getAll() {
+    public ResponseEntity<List<UserOutDto>> getAll() {
         List<User> users = userService.getAll();
-        return R.success(userMapper.toUserOutDtoList(users));
+        return ResponseEntity.ok(userMapper.toUserOutDtoList(users));
     }
 }
