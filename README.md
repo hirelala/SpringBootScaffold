@@ -46,6 +46,7 @@ DB_PASSWORD=password
 DB_DRIVER_CLASS=org.h2.Driver
 DB_JPA_DIALECT=org.hibernate.dialect.H2Dialect
 ```
+Once Spring Boot started, H2 can be access by [http://localhost:8080/h2-console](http://localhost:8080/h2-console).
 
 ### 3.2 MySQL
 Create a MySQL database named `springboot_scaffold`, then setup environment variables as following (change accordingly):
