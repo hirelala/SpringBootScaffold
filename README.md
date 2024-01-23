@@ -86,5 +86,4 @@ java -jar build/libs/SpringbootScaffold.jar
 
 [![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/runlala/SpringBootScaffold) (AWS)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/runlala/SpringBootScaffold)
 
