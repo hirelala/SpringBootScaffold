@@ -14,11 +14,8 @@
 - Lombok: `1.18.30`
 - Mapstruct: `1.5.5.Final`
 
-## 1 Demo
-[DEMO](https://springboot-scaffold.onrender.com/)
 
-
-## 2 Run in IDEA IDE
+## 1 Run in IDEA IDE
 <details>
 <summary>Click to expand</summary>
 
@@ -29,7 +26,7 @@
 4. The data will save to H2 database file `./springboot_scaffold.mv.db` by default.
 </details>
 
-## 3 Database configuration
+## 2 Database configuration
 <details>
 <summary>Click to expand</summary>
 
@@ -37,7 +34,7 @@
 
 Following shows how to change by environment variables.
 
-### 3.1 H2 database (default)
+### 2.1 H2 database (default)
 H2 is **DEFAULT database** for **SpringBootScaffold**. Its configuration is:
 ```dotenv
 DB_JDBC_URL=jdbc:h2:mem:springboot_scaffold
@@ -48,7 +45,7 @@ DB_JPA_DIALECT=org.hibernate.dialect.H2Dialect
 ```
 Once Spring Boot started, H2 can be access by [http://localhost:8080/h2-console](http://localhost:8080/h2-console).
 
-### 3.2 MySQL
+### 2.2 MySQL
 Create a MySQL database named `springboot_scaffold`, then setup environment variables as following (change accordingly):
 ```dotenv
 DB_JDBC_URL=jdbc:mysql://localhost:3306/springboot_scaffold?useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=GMT%2B8
@@ -58,7 +55,7 @@ DB_DRIVER_CLASS=com.mysql.cj.jdbc.Driver
 DB_JPA_DIALECT=org.hibernate.dialect.MySQLDialect
 ```
 
-### 3.3 PostgreSQL
+### 2.3 PostgreSQL
 Create a PostgreSQL database named `springboot_scaffold`, then setup environment variables as following (change accordingly):
 ```dotenv
 DB_JDBC_URL=jdbc:postgresql://localhost:5432/springboot_scaffold
@@ -69,7 +66,7 @@ DB_JPA_DIALECT=org.hibernate.dialect.PostgreSQLDialect
 ```
 </details>
 
-## 4 How to Build Jar
+## 3 How to Build Jar
 <details>
 <summary>Click to expand</summary>
 
@@ -80,7 +77,7 @@ java -jar build/libs/SpringbootScaffold.jar
 ```
 </details>
 
-## 5 One Click Deployment
+## 4 One Click Deployment
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/runlala/SpringBootScaffold.git) (free)
 
@@ -88,4 +85,6 @@ java -jar build/libs/SpringbootScaffold.jar
 [![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/runlala/SpringBootScaffold/tree/main&refcode=026c8249359c)
 
 [![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/runlala/SpringBootScaffold) (AWS)
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/runlala/SpringBootScaffold)
 
